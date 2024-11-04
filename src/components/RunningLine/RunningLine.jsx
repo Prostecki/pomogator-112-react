@@ -1,17 +1,24 @@
 import "./RunningLine.css";
 const RunningLine = () => {
+  const uniqueText = [
+    "Восстановление дверей после МЧС",
+    "Вскрытие замков",
+    "Вскрытие авто",
+    "Замена замков",
+  ];
   return (
     <section className="running-line-container">
       <div className="running-line-content">
-        <p className="running-line">Восстановление дверей после МЧС</p>
-        <p className="running-line">Вскрытие замков</p>
-        <p className="running-line">Вскрытие авто</p>
-        <p className="running-line">Замена замков</p>
-
-        <p className="running-line">Восстановление дверей после МЧС</p>
-        <p className="running-line">Вскрытие замков</p>
-        <p className="running-line">Вскрытие авто</p>
-        <p className="running-line">Замена замков</p>
+        {uniqueText.map((text, index) => (
+          <p className="running-line" key={index}>
+            {text}
+          </p>
+        ))}
+        {uniqueText.map((text, index) => (
+          <p className="running-line" key={index}>
+            {text}
+          </p>
+        ))}
       </div>
     </section>
   );

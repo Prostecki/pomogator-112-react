@@ -1,7 +1,7 @@
 import "./Firstsection.css";
 import Button from "./Buttons/Button";
 const Firstsection = () => {
-  const telNum = "+7(995)911-112-5";
+  const telNum = "+7 (995) 911-112-5";
   const textForm = "Вызвать мастера";
   return (
     <section className="first-presenting-section">
