@@ -1,6 +1,8 @@
-const Button = (props) => {
-  //Two const variables which was declared in Firstsection, lay down here as child
-  return <button className="call-to-locksmith button">{props.children}</button>;
-};
+// Button.jsx
+const Button = ({ onClick, children }) => (
+  <button onClick={onClick} className="call-to-locksmith button">
+    {children}
+  </button>
+);
 
 export default Button;

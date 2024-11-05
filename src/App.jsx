@@ -1,7 +1,6 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import Firstsection from "./components/Main/Firstsection/Firstsection";
-import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
 import AllDayLocksmithServices from "./components/AlldayLocksmithServices/AllDayLocksmithServices";
 import ServicesSection from "./components/ServicesSection/ServicesSection";
 import RunningLine from "./components/RunningLine/RunningLine";
@@ -15,7 +14,6 @@ function App() {
       <Firstsection />
       <RunningLine />
       <ProcedureSection />
-      <FeedbackForm />
       <AllDayLocksmithServices />
       <ServicesSection />
       <Footer />

@@ -1,8 +1,23 @@
 import "./Firstsection.css";
-import Button from "./Buttons/Button";
+import { useState } from "react";
+import Button from "./Buttons/Button"; // Убедитесь, что эта кнопка реализована правильно
+import FeedbackForm from "../../FeedbackForm/FeedbackForm";
+
 const Firstsection = () => {
-  const telNum = "+7 (995) 911-112-5";
-  const textForm = "Вызвать мастера";
+  const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для управления модальным окном
+  const telNum = "+12345677";
+  const textForm = "Вызвать специалиста";
+
+  const handleOpenModal = () => {
+    console.log("Кнопка нажата, открываем модал");
+    setIsModalOpen(true); // Открытие модального окна
+  };
+
+  const handleCloseModal = () => {
+    console.log("Закрываем модал");
+    setIsModalOpen(false); // Закрытие модального окна
+  };
+
   return (
     <section className="first-presenting-section">
       <div className="background-wrapper"></div>
@@ -14,7 +29,9 @@ const Firstsection = () => {
           Ваши потребности — наш приоритет
         </h1>
         <Button>{telNum}</Button>
-        <Button>{textForm}</Button>
+        <Button onClick={handleOpenModal}>{textForm}</Button>
+        {isModalOpen && <FeedbackForm onClose={handleCloseModal} />}
+        {/* Условная отрисовка модального окна */}
       </div>
     </section>
   );

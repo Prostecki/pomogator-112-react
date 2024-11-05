@@ -1,0 +1,116 @@
+/* Стили для модалки */
+.feedback-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* display: none; скрыто по умолчанию */
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity 0.5s ease; /* Плавное изменение opacity */
+}
+
+/* Когда модалка открыта, она становится видимой */
+.feedback-form-container.visible {
+  display: flex;
+  opacity: 1; /* Появляется плавно */
+  pointer-events: auto; /* Разрешаем взаимодействие */
+}
+
+/* Стили для содержимого модалки */
+.feedback-form-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  transform: scale(0.9); /* Начальное уменьшение */
+  transition: transform 0.3s ease; /* Плавное увеличение */
+}
+
+.feedback-form-container.visible .feedback-form-content {
+  transform: scale(
+    1
+  ); /* В процессе открытия масштабируется до нормального размера */
+}
+.close-modal {
+  cursor: pointer; /* Указатель при наведении */
+  font-size: 20px; /* Размер шрифта для кнопки закрытия */
+  color: #333; /* Цвет текста */
+  float: right; /* Выравнивание вправо */
+}
+
+h1 {
+  font-size: 20px; /* Размер заголовка */
+  margin-bottom: 15px; /* Отступ снизу */
+}
+
+.form-submit {
+  background-color: #007bff; /* Цвет кнопки отправки */
+  color: white; /* Цвет текста на кнопке */
+  padding: 10px 15px; /* Отступы */
+  border: none; /* Убираем рамку */
+  border-radius: 4px; /* Закругленные углы */
+  cursor: pointer; /* Указатель при наведении */
+}
+
+.form-submit:hover {
+  background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+#contact-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-form-container.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.feedback-form-container h1 {
+  margin: 0 0 25px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+form {
+  position: relative;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+  resize: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
