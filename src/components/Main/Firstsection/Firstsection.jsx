@@ -1,21 +1,21 @@
 import "./Firstsection.css";
 import { useState } from "react";
-import Button from "./Buttons/Button"; // Убедитесь, что эта кнопка реализована правильно
+import Button from "./Buttons/Button";
 import FeedbackForm from "../../FeedbackForm/FeedbackForm";
 
 const Firstsection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для управления модальным окном
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const telNum = "+12345677";
   const textForm = "Вызвать специалиста";
 
   const handleOpenModal = () => {
-    console.log("Кнопка нажата, открываем модал");
-    setIsModalOpen(true); // Открытие модального окна
+    console.log("Button clicked, modal opens");
+    setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    console.log("Закрываем модал");
-    setIsModalOpen(false); // Закрытие модального окна
+    console.log("Close modal");
+    setIsModalOpen(false);
   };
 
   return (
