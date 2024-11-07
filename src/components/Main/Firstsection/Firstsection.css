@@ -30,14 +30,14 @@
 
 .call-to-locksmith {
   display: block;
-  width: 200px;
+  max-width: 200px;
   margin: 20px auto;
   padding: 10px;
   background-color: #e8491d;
   color: white;
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1rem;
   border-radius: 5px;
   border: 2px solid black;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);

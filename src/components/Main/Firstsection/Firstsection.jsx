@@ -5,7 +5,6 @@ import FeedbackForm from "../../FeedbackForm/FeedbackForm";
 
 const Firstsection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const telNum = "+12345677";
   const textForm = "Вызвать специалиста";
 
   const handleOpenModal = () => {
@@ -28,7 +27,6 @@ const Firstsection = () => {
         <h1 className="first-section-headline">
           Ваши потребности — наш приоритет
         </h1>
-        <Button>{telNum}</Button>
         <Button onClick={handleOpenModal}>{textForm}</Button>
         <FeedbackForm show={isModalOpen} onClose={handleCloseModal} />
       </div>
