@@ -30,8 +30,7 @@ const Firstsection = () => {
         </h1>
         <Button>{telNum}</Button>
         <Button onClick={handleOpenModal}>{textForm}</Button>
-        {isModalOpen && <FeedbackForm onClose={handleCloseModal} />}
-        {/* Условная отрисовка модального окна */}
+        <FeedbackForm show={isModalOpen} onClose={handleCloseModal} />
       </div>
     </section>
   );
